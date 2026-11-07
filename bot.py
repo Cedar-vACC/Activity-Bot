@@ -10,7 +10,7 @@ import threading
 # Config
 # -----------------------------
 VATSIM_DATA_URL = "https://data.vatsim.net/v3/vatsim-data.json"
-CHANNEL_ID = 1421144864267173938  # Replace with your channel ID
+CHANNEL_ID = 1566057473708654672  # Replace with your channel ID
 WATCHED_POSITIONS = [
     "ORBI_TWR", "ORBI_GND", "ORBI_DEL", "ORBI_APP", "ORBI_DEP",
     "ORBB_N_CTR", "ORBB_CTR", "ORBB_1_CTR", "ORBB_2_CTR", "ORBB_S_CTR",
@@ -80,7 +80,7 @@ class MyClient(discord.Client):
                             inline=False
                         )
                         embed.set_thumbnail(url="attachment://thumbnail.png")
-                        embed.set_footer(text="Levant vACC Operations")
+                        embed.set_footer(text="Cedar vACC Operations")
 
                         await channel.send(file=file, embed=embed)
 
@@ -116,7 +116,7 @@ class MyClient(discord.Client):
                         embed.add_field(name="End Time", value=timestamp, inline=True)
                         embed.add_field(name="Session Duration", value=online_time, inline=True)
                         embed.set_thumbnail(url="attachment://thumbnail.png")
-                        embed.set_footer(text="Levant vACC Operations")
+                        embed.set_footer(text="Cedar vACC Operations")
                         await channel.send(file=file, embed=embed)
 
                     # -----------------------------
@@ -139,7 +139,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "✅ Levant vACC Bot is running!"
+    return "✅ Cedar vACC Bot is running!"
 
 def run_discord_bot():
     token = os.environ.get("DISCORD_TOKEN")
