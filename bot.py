@@ -16,7 +16,7 @@ WATCHED_POSITIONS = [
     "ORBB_N_CTR", "ORBB_CTR", "ORBB_1_CTR", "ORBB_2_CTR", "ORBB_S_CTR",
     "ORBB_U_CTR", "ORBB_V_CTR", "ORNI_GND", "ORNI_TWR", "ORMM_GND", "ORMM_TWR",
     "OREZ_TWR", "ORER_TWR", "ORKK_GND", "ORKK_TWR", "ORBM_TWR", "ORAA_TWR",
-    "OSDI_DEL", "OSDI_GND", "OSDI_TWR", "OSDI_APP", "OSDI_DEP", "OSDI_CTR",
+    "OSDI_DEL", "OSDI_GND", "OSDI_TWR", "OSDI_APP", "OSDI_DEP", "OSTT_CTR",
     "OSAP_GND", "OSAP_TWR", "OSAP_APP", "OLBA_DEL", "OLBA_GND", "OLBA_APP",
     "OLBB_CTR", "ORBI_FMP", "OLBA_FMP", "OLBA_TWR", "ORSU_TWR", "ORAA_GND"
 ]
@@ -84,7 +84,6 @@ class MyClient(discord.Client):
 
                         await channel.send(file=file, embed=embed)
 
-                    # -----------------------------
                     # ATC went offline
                     # -----------------------------
                     for callsign in previous_callsigns - current_callsigns:
